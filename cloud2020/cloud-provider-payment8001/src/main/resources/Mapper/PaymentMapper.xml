@@ -8,7 +8,7 @@
         insert into payment(serial) values(#{serial});
     </insert>
 
-    <select id="getPaymentById" resultMap="">
+    <select id="getPaymentById" resultMap="PaymentMap">
         select * from payment where id = #{id}
     </select>
 
