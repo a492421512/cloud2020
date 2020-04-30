@@ -1,6 +1,7 @@
 package com.atguigu.springcloud.config;
 
 import org.springframework.beans.factory.annotation.Configurable;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
@@ -9,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
  * @Date: 2020-04-29  17:43
  * @Version 1.0
  */
-@Configurable
+@SpringBootConfiguration
 public class ApplicationContextConfig {
 
     //把RestTemplate注入容器
