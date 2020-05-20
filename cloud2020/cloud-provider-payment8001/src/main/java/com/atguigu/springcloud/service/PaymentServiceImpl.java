@@ -1,6 +1,6 @@
 package com.atguigu.springcloud.service;
 
-import com.atguigu.springcloud.dao.PaymentMapper;
+import com.atguigu.springcloud.mapper.PaymentMapper;
 import com.atguigu.springcloud.entities.Payment;
 import com.atguigu.springcloud.service.I.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
