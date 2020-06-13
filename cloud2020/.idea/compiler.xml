@@ -11,11 +11,10 @@
         <module name="cloud-eureka-server7001" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
-        <module name="cloud-comsumer-order80" />
+        <module name="cloud-consumer-order80" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
-      <module name="cloud-consumer-order80" target="1.8" />
       <module name="modulecloudeurekaserver7002" target="1.8" />
     </bytecodeTargetLevel>
   </component>
