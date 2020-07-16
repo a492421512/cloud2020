@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @Slf4j
-//@DefaultProperties(defaultFallback = "defaultHystrixMethod") //全局降级方法
+@DefaultProperties(defaultFallback = "defaultHystrixMethod") //全局降级方法
 public class OrderHystrixController {
 
     @Autowired
@@ -26,14 +26,14 @@ public class OrderHystrixController {
     @GetMapping("/consumer/payment/hystrix/getOk/{id}")
     @HystrixCommand
     public String paymentInfo_OK(@PathVariable("id") Integer id){
-        //int a = 10/0;
+        int a = 10/0;
         return paymentService.paymentInfo_OK(id);
     }
 
     @GetMapping("/consumer/payment/hystrix/getTimeout/{id}")
-   /* @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler",commandProperties = {
+    @HystrixCommand(fallbackMethod = "paymentInfo_TimeoutHandler",commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds",value = "1500")
-    })*/
+    })
     public String paymentInfo_Timeout(@PathVariable("id") Integer id){
         return paymentService.paymentInfo_Timeout(id);
     }
